@@ -3,18 +3,18 @@ import {
   useRef,
   useState,
   useCallback,
-  ReactNode,
+  InputHTMLAttributes,
 } from 'react';
+
+import { IconBaseProps } from 'react-icons/lib';
 
 import { useField } from '@unform/core';
 
 import { Container } from './styles';
 
-type InputProps = {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  icon: ReactNode;
-  placeholder: string;
-  rest: ReactNode;
+  icon?: React.ComponentType<IconBaseProps>;
 }
 
 const Input = ({ name, icon: Icon, ...rest }: InputProps) => {

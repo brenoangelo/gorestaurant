@@ -4,7 +4,7 @@ import { Container } from './styles';
 import Logo from '../../assets/logo.svg';
 
 type HeaderProps = {
-  openModal: boolean;
+  openModal: () => void;
 }
 
 export function Header({ openModal }: HeaderProps) {
@@ -17,7 +17,7 @@ export function Header({ openModal }: HeaderProps) {
           <div>
             <button
               type="button"
-              onClick={() => openModal}
+              onClick={openModal}
             >
               <div className="text">Novo Prato</div>
               <div className="icon">

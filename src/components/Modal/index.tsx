@@ -14,7 +14,7 @@ function Modal({isOpen, setIsOpen, children }: ModalProps){
     if (modalStatus !== isOpen) {
       setModalStatus(isOpen)
     }
-  },[])
+  },[isOpen])
 
   return (
     <ReactModal

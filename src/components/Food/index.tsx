@@ -3,21 +3,13 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 import { Container } from './styles';
 import api from '../../services/api';
 import { useState } from 'react';
-
-type Food = {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  available: boolean;
-  image: string;
-}
+import { IFood } from '../../types';
 
 type FoodProps = {
   key: number;
-  food: Food;
+  food: IFood;
   handleDelete: (id: number) => void;
-  handleEditFood: (food: Food) => void;
+  handleEditFood: (food: IFood) => void;
 }
 
 function Food({ food, handleEditFood, handleDelete }: FoodProps){
